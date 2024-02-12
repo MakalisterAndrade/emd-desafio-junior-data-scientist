@@ -10,13 +10,23 @@ WORKDIR /app
 COPY ./app/requirements.txt .
 
 # Instale as dependências a partir do arquivo requirements.txt
+
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    software-properties-common \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN git clone https://github.com/streamlit/streamlit-example.git .
+
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copie todo o conteúdo do projeto para o contêiner
-COPY . /app/
 
 # Expõe a porta que a aplicação estará escutando (ajuste conforme necessário)
-EXPOSE 5000
 
-# Comando para iniciar a aplicação (substitua main.py pelo seu arquivo principal)
-CMD ["python", "main.py"]
+EXPOSE 8500
+
+HEALTHCHECK CMD curl --fail http://localhost:8500/_stcore/health
+
+ENTRYPOINT ["streamlit", "run", "streamlit_app.py", "--server.port=8500", "--server.address=0.0.0.0"]

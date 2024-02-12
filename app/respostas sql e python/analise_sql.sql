@@ -39,6 +39,7 @@ LIMIT 1;
 -- R. Existem 12 chamados onde um destes dois campos estão nulos, e 
 -- suas descrições se referem a chamados abertos para verificação de ar-condicionado em ônibus,
 -- sendo assim, não estao atribuidos a nenhum bairro ou subprefeitura
+
 SELECT *
 FROM `datario.administracao_servicos_publicos.chamado_1746` AS c
 LEFT JOIN `datario.dados_mestres.bairro` AS b ON c.id_bairro = b.id_bairro
