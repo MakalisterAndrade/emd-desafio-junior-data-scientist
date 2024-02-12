@@ -4,7 +4,6 @@ Repositório de resolução ao desafio técnico do Escritório Municipal de Dado
 
 Os arquivos de resposta estão dentro de `app/respostas sql e python` -> [clique aqui](https://github.com/MakalisterAndrade/emd-desafio-junior-data-scientist/tree/resolucao/app/respostas%20sql%20e%20python).
 
-As análise LookerStudio podem ser acessadas neste link -> [Clique aqui](https://lookerstudio.google.com/reporting/064d29ca-c9b7-46d3-aead-a5ef3b99433a).
 
 
 Este projeto utiliza um ambiente Docker para rodar uma aplicação Streamlit, com várias bibliotecas Python para análise de dados como `numpy`, `matplotlib`, `scipy`, `basedosdados`, `jupyter`, `altair`, `pandas` e `streamlit`.
