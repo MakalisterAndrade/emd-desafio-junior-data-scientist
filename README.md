@@ -53,5 +53,10 @@ docker-compose up -d
 Após iniciar o contêiner, a aplicação Streamlit estará acessível através do navegador no seguinte endereço:
 
 ```bash
-http://localhost:5000
+http://localhost:8500
+```
+Já a aplicação jupyter pode ser acessada no endereço:
+
+```bash
+http://localhost:8888
 ```
