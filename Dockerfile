@@ -18,12 +18,10 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/streamlit/streamlit-example.git .
-
 RUN pip install --no-cache-dir -r requirements.txt
 
 
-# Expõe a porta que a aplicação estará escutando (ajuste conforme necessário)
+# Expõe a porta que a aplicação estará escutando
 
 EXPOSE 8500
 

@@ -10,6 +10,6 @@ services:
       - "8500:8500" # Porta para o Streamlit
       - "8888:8888" # Porta para o Jupyter Notebook
     command: >
-      sh -c "jupyter notebook --notebook-dir=/app --ip='0.0.0.0' --port=8888 --no-browser --allow-root & streamlit run streamlit_app.py --server.port=8500 --server.address=0.0.0.0"
+      sh -c "jupyter notebook --notebook-dir=/app --ip='0.0.0.0' --port=8888 --no-browser --allow-root --NotebookApp.token='' & streamlit run streamlit_app.py --server.port=8500 --server.address=0.0.0.0"
     restart: always
     tty: true
