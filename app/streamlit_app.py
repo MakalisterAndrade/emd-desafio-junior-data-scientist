@@ -1,19 +1,17 @@
 import streamlit as st
-from google.cloud import bigquery
+from controller.graph_A.graph_A import display_graphs_A
 
-client = bigquery.Client()
+def main():
+    st.title('Dashboard EMD')
 
-# Consulta SQL para contar os chamados no dia 01/04/2023
-query = """
-SELECT COUNT(*) as total_chamados
-FROM `datario.administracao_servicos_publicos.chamado_1746`
-WHERE DATE(data_inicio) = '2023-04-01'
-"""
+    # Aqui você pode adicionar mais opções de navegação ou filtros utilizando st.sidebar
+    
+    # Display dos gráficos
+    display_graphs_A()
 
-# Executando a consulta
-result = client.query(query)
-total_chamados = list(result)[0]["total_chamados"]
+    # Para adicionar mais gráficos, siga o padrão:
+    # from controller.graph_B.graph_B import display_graph_B
+    # display_graph_B()
 
-# Usando Streamlit para exibir o resultado
-st.title('Análise de Chamados do 1746')
-st.write(f"Total de chamados abertos no dia 01/04/2023: {total_chamados}")
+if __name__ == '__main__':
+    main()

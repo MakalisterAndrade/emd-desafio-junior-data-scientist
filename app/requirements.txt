@@ -4,5 +4,6 @@ scipy
 basedosdados
 jupyter
 altair
-pandas
+pandas==2.2
 streamlit
+plotly

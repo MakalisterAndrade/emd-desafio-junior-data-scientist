@@ -1,5 +1,5 @@
 #Sistema Operacional
-FROM python:3.8-slim-buster
+FROM python:3.11-slim-buster
 
 # Define a variável de ambiente para não gerar logs de saída em buffer
 ENV PYTHONUNBUFFERED 1
