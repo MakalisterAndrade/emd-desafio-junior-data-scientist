@@ -2,7 +2,7 @@ numpy
 matplotlib
 scipy
 basedosdados
-jupyter
+#jupyter
 altair
 pandas==2.2
 streamlit
