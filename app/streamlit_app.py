@@ -10,6 +10,8 @@ def main():
     # Adicionando um link para o blog pessoal
     st.markdown('Para visitar meu blog pessoal, [clique aqui](https://makalister.netlify.app/).', unsafe_allow_html=True)
     
+    st.markdown('Para visitar o código fonte desta aplicação, [clique aqui](https://github.com/MakalisterAndrade/emd-desafio-junior-data-scientist).', unsafe_allow_html=True)
+
     # Display dos gráficos
     display_graphs_A()
 
