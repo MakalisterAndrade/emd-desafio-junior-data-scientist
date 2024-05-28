@@ -1,9 +1,0 @@
-numpy
-matplotlib
-scipy
-basedosdados
-#jupyter
-altair
-pandas==2.2
-streamlit
-plotly
